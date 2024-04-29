@@ -1,34 +1,50 @@
-# Summarizer
+# Summarizer Web App
 
-This is a simple application to summarize web page content and generate a Midjourney prompt from it.
+This is a simple web app that summarizes the content of a web page and generates a prompt for creating a Midjourney image based on the summary.
+
+## Features
+
+- Summarize article content from a user-input URL
+- Generate a Midjourney prompt based on the summary
+- Simple web UI to input a URL and view the generated summary and prompt  
+- Node.js backend with Express server
+- Puppeteer web scraping to extract page content
+- Ollama API for text summarization
 
 ## Usage
 
-1. Install dependencies:
-
+### Install
 
 `npm install`
 
+### Run Server 
 
-2. Open app.js and provide a url to summarize
+`node server.js`
 
-3. Run the script:
+This will start the Express server on port 3000.
 
-`node ./app.js`
+### Use App
 
-4. The summarized content and Midjourney prompt will be logged to the console
+Navigate to `http://localhost:3000`
 
-## Functionality
+Enter a URL and click "Generate" to summarize the content and generate a Midjourney prompt.
 
-The main functionality is in tools/summarizer.js. It uses Puppeteer to:
+The summary and prompt will be displayed on the page.
 
-- Fetch the page content 
-- Extract all text elements
-- Summarize the text content using the Ollama API
-- Generate a Midjourney prompt from the summary
+## Code Overview
 
-## Dependencies
+- `server.js` - Express server
+- `public/index.html` - Frontend UI 
+- `public/index.js` - Frontend logic
+- `tools/summarizer.js` - Scrapes content and generates summary + prompt
 
-- @langchain/community/llms/ollama - For text summarization
-- Puppeteer - For scraping page content
+## Built With
 
+- [Express](https://expressjs.com/) - Web framework
+- [Puppeteer](https://pptr.dev/) - Headless browser for scraping  
+- [Ollama API](https://olllama.com/) - Text summarization
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
