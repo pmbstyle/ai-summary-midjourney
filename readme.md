@@ -2,6 +2,8 @@
 
 This is a simple web app that summarizes the content of a web page and generates a prompt for creating a Midjourney image based on the summary.
 
+![App Preview](preview.png)
+
 ## Features
 
 - Summarize article content from a user-input URL
@@ -9,7 +11,7 @@ This is a simple web app that summarizes the content of a web page and generates
 - Simple web UI to input a URL and view the generated summary and prompt  
 - Node.js backend with Express server
 - Puppeteer web scraping to extract page content
-- Ollama API for text summarization
+- Ollama API for text summarization, llama3 as default model
 
 ## Usage
 
@@ -42,7 +44,7 @@ The summary and prompt will be displayed on the page.
 
 - [Express](https://expressjs.com/) - Web framework
 - [Puppeteer](https://pptr.dev/) - Headless browser for scraping  
-- [Ollama API](https://olllama.com/) - Text summarization
+- [Ollama API](https://olllama.com/) - LLM server for summarization
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
 
 ## License
